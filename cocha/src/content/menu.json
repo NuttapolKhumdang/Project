@@ -3,7 +3,7 @@
         "title": "Creamy Iced Pumpkin Spice Latte",
         "price": "2.99",
         "images": {
-            "preview": "/src/images/Creamy Iced Pumpkin Spice Latte/iced-pumpkin-spice-latte-frontview.jpg"
+            "preview": "./src/images/Creamy Iced Pumpkin Spice Latte/iced-pumpkin-spice-latte-frontview.jpg"
         },
         "category": "Latte"
     },
@@ -11,7 +11,7 @@
         "title": "Homemade Hazelnut Latte",
         "price": "2.99",
         "images": {
-            "preview": "/src/images/Homemade Hazelnut Latte/Hazelnut-Iced-Coffee-Hero.webp"
+            "preview": "./src/images/Homemade Hazelnut Latte/Hazelnut-Iced-Coffee-Hero.webp"
         },
         "category": "Latte"
     },
@@ -19,7 +19,7 @@
         "title": "Iced Apple Crisp Nondairy Cream Chai",
         "price": "2.99",
         "images": {
-            "preview": "/src/images/Iced Apple Crisp Nondairy Cream Chai/iced-apple-crisp-chai-latte-with-oatmilk.webp"
+            "preview": "./src/images/Iced Apple Crisp Nondairy Cream Chai/iced-apple-crisp-chai-latte-with-oatmilk.webp"
         },
         "category": "Latte"
     },
@@ -27,7 +27,7 @@
         "title": "Iced Pecan Crunch Oatmilk Latte",
         "price": "2.99",
         "images": {
-            "preview": "/src/images/Iced Pecan Crunch Oatmilk Latte/iced-pecan-crunch-latte.webp"
+            "preview": "./src/images/Iced Pecan Crunch Oatmilk Latte/iced-pecan-crunch-latte.webp"
         },
         "category": "Latte"
     },
@@ -35,7 +35,7 @@
         "title": "Gingerbread Oatmilk Chai Tea Latte",
         "price": "2.99",
         "images": {
-            "preview": "/src/images/Gingerbread Oatmilk Chai Tea Latte/gingerbread-chai-tea-latte-texture.jpg"
+            "preview": "./src/images/Gingerbread Oatmilk Chai Tea Latte/gingerbread-chai-tea-latte-texture.jpg"
         },
         "category": "Latte"
     },
@@ -43,7 +43,7 @@
         "title": "Homemade Gingerbread Latte",
         "price": "2.99",
         "images": {
-            "preview": "/src/images/Homemade Gingerbread Latte/gingerbread-latte-with-oatmilk.jpg"
+            "preview": "./src/images/Homemade Gingerbread Latte/gingerbread-latte-with-oatmilk.jpg"
         },
         "category": "Latte"
     },
@@ -52,7 +52,7 @@
         "title": "Hot or Iced Protein Coffee",
         "price": "2.99",
         "images": {
-            "preview": "/src/images/Hot or Iced Protein Coffee/vegan-protein-coffee-front-hero.jpg"
+            "preview": "./src/images/Hot or Iced Protein Coffee/vegan-protein-coffee-front-hero.jpg"
         },
         "category": "Coffee"
     },
@@ -61,7 +61,7 @@
         "title": "Taro Milk Bubble Tea with Real Taro",
         "price": "2.99",
         "images": {
-            "preview": "/src/images/Taro Milk Bubble Tea with Real Taro or Powder/real-taro-milk-bubble-tea-front-purple.jpg"
+            "preview": "./src/images/Taro Milk Bubble Tea with Real Taro or Powder/real-taro-milk-bubble-tea-front-purple.jpg"
         },
         "category": "Milk Tea"
     },
@@ -71,7 +71,7 @@
         "title": "Double Chocolate Zucchini Bread",
         "price": "3.59",
         "images": {
-            "preview": "/src/images/Double Chocolate Zucchini Bread/vegan-double-chocolate-zucchini-bread-loaf.jpg"
+            "preview": "./src/images/Double Chocolate Zucchini Bread/vegan-double-chocolate-zucchini-bread-loaf.jpg"
         },
         "category": "Dessert"
     },
@@ -80,7 +80,7 @@
         "title": "Fluffy Bisquick Pancakes",
         "price": "3.59",
         "images": {
-            "preview": "/src/images/Fluffy Bisquick Pancakes/vegan-bisquick-pancakes-stacked.jpg"
+            "preview": "./src/images/Fluffy Bisquick Pancakes/vegan-bisquick-pancakes-stacked.jpg"
         },
         "category": "Breakfast"
     }
