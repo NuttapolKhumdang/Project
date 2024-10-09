@@ -14,19 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./src/stylesheets/style.css">
-
-    <script>
-        async function walk(path, json = true) {
-            try {
-                const response = await fetch(path);
-                if (json) return await response.json();
-                else return await response.text();
-            } catch (e) {
-                console.error(e);
-                return null;
-            }
-        }
-    </script>
+    
+    <script src="/javascripts/utils.js"></script>
 </head>
 
 <body class="selection:text-white selection:bg-black cursor-default">
