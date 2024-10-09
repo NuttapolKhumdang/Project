@@ -4,11 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projects | NuttapolKhumdang</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Noto+Sans+Thai:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/stylesheets/style.css">
 </head>
 
-<body>
-    <script>window.location.href = "/cocha";</script>
+<body class="selection:bg-black selection:text-white">
+    <nav class="sticky top-0 z-40 bg-white w-full">
+        <div class="max-w-6xl mx-auto py-2 px-8 lg:px-0 flex flex-row items-center justify-between">
+            <header>
+                <h1 class="*:leading-none flex flex-col"><span class="font-medium text-xl">Landing</span><span
+                        class="text-base w-full text-right">The Project</span></h1>
+            </header>
+
+            <menu class="flex flex-row items-center gap-4 text-lg *:flex *:flex-row *:gap-2">
+                <a href="https://github.com/nuttapolkhumdang/project" target="_blank"
+                    class="relative after:duration-300 after:absolute after:left-0 after:-bottom-1 hover:after:bottom-0 after:w-full hover:after:h-px after:bg-opacity-0 hover:after:bg-opacity-100 hover:after:bg-black">
+                    <p class="tracking-tight">Source on GitHub</p>
+                    <span class="font-mono">/&gt;</span>
+                </a>
+            </menu>
+        </div>
+    </nav>
+
+    <main
+        class="mx-auto w-full max-w-5xl h-96 my-24 px-8 lg:px-0 flex flex-col items-center justify-center gap-8 scroll-m-8">
+        <header class="flex flex-col items-center gap-2 py-16">
+            <div class="border-b border-black font-bold scroll-m-16 bg-black text-white px-4 flex flex-col items-end">
+                <h1 class="text-6xl">Landing</h1>
+                <p>The Project</p>
+            </div>
+        </header>
+    </main>
+
+    <main class="*:py-16 *:h-max *:*:max-w-6xl *:*:mx-auto *:*:py-2 *:*:px-8 *:*:lg:px-0">
+        <div class="w-full bg-indigo-600 text-white">
+            <a href="/cocha/" class="group flex flex-col gap-8">
+                <header>
+                    <div class="w-full flex flex-row items-end justify-end group-hover:text-green-200 duration-200">
+                        <h1 class="text-7xl sm:text-9xl font-medium">COCHA</h1>
+
+                        <p class="w-max">
+                            <span class="font-mono text-6xl sm:text-9xl">/&gt;</span>
+                        </p>
+                    </div>
+
+                    <p class="text-4xl">
+                        Lading page project start here. When I want to create some coffee shop web pages for infomation
+                        of cafe shop. with modern, light, minimalism style on my own design
+                    </p>
+                </header>
+
+                <div>
+                    <img src="/src/images/Cocha.png" alt="" class="object-cover">
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="flex flex-col mx-auto w-full max-w-5xl py-8 px-8 lg:px-0 mt-16 cursor-default">
+        <main class="flex flex-col md:grid md:grid-cols-2 gap-8 py-12">
+            <header class="flex flex-col *:tracking-tighter">
+                <h1 class="text-8xl">Landing <br>The Project</h1>
+            </header>
+
+            <section class="flex flex-col gap-4 *:flex *:flex-col *:gap-1 *:*:leading-none">
+                <div>
+                    <span class="text-sm">About Me</span>
+                    <p>Hi! I'm Nuttapol Khumdang. Student of
+                        <a href="http://www.pangkenpittaya.ac.th/" target="_blank"
+                            class="underline hover:text-indigo-900">Pangkenpittaya</a>
+                        I have learned Web Development and Design by myself on free time from school.
+                        Now I'm on Mathayom Suksa 6 and will be graduating soon.
+                    </p>
+                </div>
+                <div>
+                    <span class="text-sm">Contact Me</span>
+                    <p><span class="text-neutral-600 text-sm">Email</span> nuttapolkhumdang@gmail.com</p>
+                    <p><span class="text-neutral-600 text-sm">Address</span> Ubon Rachathani, Thailand</p>
+                </div>
+                <div>
+                    <span class="text-sm">Profile</span>
+                    <p><span class="text-neutral-600 text-sm">GitHub</span> <a href="https://github.com/nuttapolkhumdang" class="hover:underline underline-offset-2" target="_blank">NuttapolKhumdang</a></p>
+                    <p><span class="text-neutral-600 text-sm">Website</span> <a href="https://nuttapolkhumdang.work" class="hover:underline underline-offset-2" target="_blank">NuttapolKhumdang</a></p>
+                    <p><span class="text-neutral-600 text-sm">Instagram</span> <a href="https://www.instagram.com/_winthrr" class="hover:underline underline-offset-2" target="_blank">_winthrr</a></p>
+                </div>
+            </section>
+        </main>
+
+        <p>&copy; 2024, Nuttapol Khumdang &mdash; All right reserved.</p>
+        <p>Design And Development By <a href="https://nuttapolkhumdang.work" target="_blank" class="hover:underline">
+                Nuttapol Khumdang
+            </a>
+        </p>
+    </footer>
 </body>
 
 </html>
