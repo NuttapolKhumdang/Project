@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./src/stylesheets/style.css">
-    
+
     <script src="/javascripts/utils.js"></script>
 </head>
 
@@ -81,6 +81,14 @@
                     Breakfast & Brunch
                 </p>
             </a>
+            <a href="#Main" class="group">
+                <img src="./src/images/Crispy Black Bean Tacos with Jalapeño Cilantro Aioli/crispy-black-bean-tacos-aioli.jpg"
+                    alt="Crispy Black Bean Tacos with Jalapeño Cilantro Aioli" class="absolute h-full w-full object-cover -z-10">
+                <p
+                    class="drop-shadow-2xl after:duration-300 after:absolute after:left-0 after:-bottom-1 group-hover:after:bottom-0 after:w-full group-hover:after:h-px after:bg-opacity-0 group-hover:after:bg-opacity-100 group-hover:after:bg-white bg-black p-2">
+                    Mains
+                </p>
+            </a>
         </section>
     </main>
 
@@ -109,11 +117,11 @@
     </template>
 
     <template id="__T-MENULIST_ITEM">
-        <a href="" class="group relative *:duration-500">
+        <div href="" class="group relative *:duration-500">
             <img src="" alt="" id="_PREVIEW">
 
             <header
-                class="absolute bottom-0 p-4 flex flex-col bg-black bg-opacity-75 text-white opacity-0 group-hover:opacity-100 h-0 group-hover:h-1/2">
+                class="absolute bottom-0 p-4 flex flex-col bg-black bg-opacity-75 text-white opacity-0 group-hover:opacity-100 h-0 group-hover:h-full md:group-hover:h-1/2">
                 <span id="_CATEGORY"></span>
                 <h1 class="text-3xl leading-none" id="_TITLE"></h1>
                 <p class="inline-flex py-1">
@@ -121,7 +129,7 @@
                     <span id="_PRICE"></span>
                 </p>
             </header>
-        </a>
+        </div>
     </template>
 
     <script>
