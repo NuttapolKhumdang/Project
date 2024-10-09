@@ -83,5 +83,14 @@
             "preview": "./src/images/Fluffy Bisquick Pancakes/vegan-bisquick-pancakes-stacked.jpg"
         },
         "category": "Breakfast"
+    },
+
+    {
+        "title": "Crispy Black Bean Tacos with Jalapeño Cilantro Aioli",
+        "price": "8.29",
+        "images": {
+            "preview": "./src/images/Crispy Black Bean Tacos with Jalapeño Cilantro Aioli/crispy-black-bean-tacos-aioli.jpg"
+        },
+        "category": "Main"
     }
 ]
