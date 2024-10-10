@@ -38,13 +38,15 @@
         </div>
     </nav>
 
-    <main class="relative w-full flex h-96 items-center justify-center">
-        <div class="absolute z-10 w-full h-96 flex">
-            <img src="./src/images/mug-8235059_1920.jpg" alt="" class="w-full h-96 object-cover">
+    <main class="relative w-full flex h-screen items-center justify-center">
+        <div class="absolute z-10 w-full h-full flex">
+            <!-- <img src="./src/images/mug-8235059_1920.jpg" alt="" class="w-full h-96 object-cover"> -->
+            <video src="./src/videos/27230-362518559.mp4" class="w-full object-cover h-full" loop muted
+                autoplay></video>
         </div>
 
         <div id="xm-controller" class="absolute z-10 w-full h-full max-w-5xl">
-            <header class="absolute bottom-5 text-white w-1/2 px-8 lg:px-0">
+            <header class="absolute bottom-8 text-black p-4 w-full md:w-1/2 px-8 lg:px-4 bg-white">
                 <h1 class="text-8xl font-bold py-2">Cocha &mdash;</h1>
                 <p class="leading-5 text-lg">Your Cozy Coffee Haven. Step into a world of relaxation and indulgence. Our
                     welcoming atmosphere and expertly crafted beverages will make you feel right at home. Come unwind
@@ -73,7 +75,7 @@
                     Desserts
                 </p>
             </a>
-            <a href="#Desserts" class="group">
+            <a href="#Breakfast & Brunch" class="group">
                 <img src="./src/images/Fluffy Bisquick Pancakes/vegan-bisquick-pancakes-blog-10-683x1024.jpg"
                     alt="gingerbread chai tea latte" class="absolute h-full w-full object-cover -z-10">
                 <p
@@ -81,9 +83,10 @@
                     Breakfast & Brunch
                 </p>
             </a>
-            <a href="#Main" class="group">
+            <a href="#Mains" class="group">
                 <img src="./src/images/Crispy Black Bean Tacos with Jalapeño Cilantro Aioli/crispy-black-bean-tacos-aioli.jpg"
-                    alt="Crispy Black Bean Tacos with Jalapeño Cilantro Aioli" class="absolute h-full w-full object-cover -z-10">
+                    alt="Crispy Black Bean Tacos with Jalapeño Cilantro Aioli"
+                    class="absolute h-full w-full object-cover -z-10">
                 <p
                     class="drop-shadow-2xl after:duration-300 after:absolute after:left-0 after:-bottom-1 group-hover:after:bottom-0 after:w-full group-hover:after:h-px after:bg-opacity-0 group-hover:after:bg-opacity-100 group-hover:after:bg-white bg-black p-2">
                     Mains
@@ -111,7 +114,7 @@
     </template>
 
     <template id="__T-MENULIST_CONTAINER">
-        <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 *:*:overflow-hidden"
+        <section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 md:gap-4 *:*:overflow-hidden"
             id="_MENULIST_CONTAINER">
         </section>
     </template>
@@ -120,15 +123,22 @@
         <div href="" class="group relative *:duration-500">
             <img src="" alt="" id="_PREVIEW">
 
-            <header
-                class="absolute bottom-0 p-4 flex flex-col bg-black bg-opacity-75 text-white opacity-0 group-hover:opacity-100 h-0 group-hover:h-full md:group-hover:h-1/2">
-                <span id="_CATEGORY"></span>
+            <a href="" id="_HLINK"
+                class="absolute bottom-0 p-4 flex flex-col bg-black bg-opacity-75 text-white opacity-0 group-hover:opacity-100 h-0 group-hover:h-full md:group-hover:h-2/3">
+                <div class="w-full flex flex-row items-center justify-between ">
+                    <span id="_CATEGORY"></span>
+                    <p class="flex flex-row items-center justify-center gap-2">
+                        More
+                        <span class="font-mono">-&gt;</span>
+                    </p>
+                </div>
                 <h1 class="text-3xl leading-none" id="_TITLE"></h1>
                 <p class="inline-flex py-1">
                     <span>$</span>
                     <span id="_PRICE"></span>
                 </p>
-            </header>
+
+            </a>
         </div>
     </template>
 
@@ -137,7 +147,6 @@
         __T["MENULIST_ITEM"] = document.getElementById("__T-MENULIST_ITEM");
         __T["MENULIST_HEADER"] = document.getElementById("__T-MENULIST_HEADER");
         __T["MENULIST_CONTAINER"] = document.getElementById("__T-MENULIST_CONTAINER");
-
 
         const __E__ = {};
         __E__["MENULIST"] = document.getElementById("__E-MENULIST");
@@ -165,6 +174,16 @@
                     description: "Satisfy your sweet tooth with our delectable desserts. From classic cakes and pastries to innovative treats, we've got something to tempt every taste bud.",
                     content: ["Dessert"],
                 },
+                {
+                    title: "Breakfast & Brunch",
+                    description: "Satisfy your sweet tooth with our delectable desserts. From classic cakes and pastries to innovative treats, we've got something to tempt every taste bud.",
+                    content: ["Breakfast"],
+                },
+                {
+                    title: "Mains",
+                    description: "Satisfy your sweet tooth with our delectable desserts. From classic cakes and pastries to innovative treats, we've got something to tempt every taste bud.",
+                    content: ["Main"],
+                },
             ];
 
             sections.forEach(section => {
@@ -181,6 +200,7 @@
                     t.querySelector("#_CATEGORY").innerHTML = e.category;
                     t.querySelector("#_PREVIEW").src = e.images.preview;
                     t.querySelector("#_PREVIEW").alt = e.title;
+                    t.querySelector("#_HLINK").href = `./detail?product=${e.title}&category=${e.category}`;
 
                     insertTemplate(sectionTemplate.querySelector("#_MENULIST_CONTAINER"), t);
                 });
@@ -227,12 +247,6 @@
         </section>
     </main>
 
-    <!-- <main class="flex flex-col gap-4 items-center justify-center mx-auto w-full max-w-5xl py-2 px-8 lg:px-0 mt-16">
-        <h1 class="text-2xl font-bold bg-black text-white p-2"></h1>
-        <p class="w-2/3 text-center text-xl">
-        </p> 
-    </main> -->
-
     <footer class="flex flex-col mx-auto w-full max-w-5xl py-8 px-8 lg:px-0 mt-16 cursor-default">
         <main class="flex flex-col md:grid md:grid-cols-2 gap-8 py-12">
             <header class="flex flex-col *:tracking-tighter">
@@ -256,7 +270,8 @@
         </main>
 
         <p>&copy; 2024, COCHA &mdash; All right reserved.</p>
-        <p>Provided By <a href="https://nuttapolkhumdang.work" target="_blank" class="hover:underline">Nuttapol Khumdang</a></p>
+        <p>Provided By <a href="https://nuttapolkhumdang.work" target="_blank" class="hover:underline">Nuttapol
+                Khumdang</a></p>
     </footer>
 
 </body>
