@@ -103,6 +103,71 @@
         </header>
     </main>
 
+    <main
+        class="relative mx-auto w-full max-w-5xl bg-white h-full md:max-h-[48rem] flex flex-col md:grid md:grid-cols-2 py-16 mb-16"
+        id="Preview">
+        <img id="_BANNERPV-IMAGE"
+            class="h-full md:h-[80vh] md:max-h-[48rem] max-w-5xl md:rounded w-full object-cover object-center">
+
+        <section
+            class="absolute bottom-16 bg-black text-white bg-opacity-75 md:relative md:bottom-0 md:text-black md:bg-transparent md:bg-opacity-100 flex flex-col gap-2 px-8 py-4 w-full">
+            <header class="">
+                <span class="text-base" id="_BANNERPV-CATEGORY"></span>
+                <h1 class="text-4xl font-bold" id="_BANNERPV-TITLE"></h1>
+            </header>
+
+            <p class="leading-5 text-xl" id="_BANNERPV-DESCRIPTION"></p>
+
+            <div class="w-full text-right">
+                <span class="text-sm">$</span><span class="text-xl font-bold" id="_BANNERPV-PRICE"></span>
+                <span>/ Piece</span>
+            </div>
+        </section>
+    </main>
+    <script>
+        var menu;
+        (async function () {
+            menu = await walk('./src/content/menu.json');
+        })();
+    </script>
+
+    <script>
+        const _BANNERPV = {};
+        _BANNERPV["TITLE"] = document.getElementById("_BANNERPV-TITLE");
+        _BANNERPV["DESCRIPTION"] = document.getElementById("_BANNERPV-DESCRIPTION");
+        _BANNERPV["CATEGORY"] = document.getElementById("_BANNERPV-CATEGORY");
+        _BANNERPV["PRICE"] = document.getElementById("_BANNERPV-PRICE");
+        _BANNERPV["IMAGE"] = document.getElementById("_BANNERPV-IMAGE");
+
+        function PreviewProduct(title, category, move = true) {
+            const product = menu.filter(e => {
+                return e.title === title && e.category == category;
+            })[0];
+
+            _BANNERPV["TITLE"].innerText = product.title;
+            _BANNERPV["DESCRIPTION"].innerHTML = product.description ?? "";
+            _BANNERPV["CATEGORY"].innerHTML = product.category;
+            _BANNERPV["PRICE"].innerHTML = product.price;
+            _BANNERPV["IMAGE"].src = product.images.preview;
+            _BANNERPV["IMAGE"].alt = product.title;
+
+            if (move) {
+                const e = document.createElement("a");
+                e.href = "#Preview";
+                e.click();
+
+                setTimeout(() => e.remove(), 2000)
+            }
+        }
+
+        const previewProductWorker = setInterval(() => {
+            if (menu) {
+                PreviewProduct("Fluffy Bisquick Pancakes", "Breakfast", false);
+                clearInterval(previewProductWorker);
+            }
+        }, 150);
+    </script>
+
     <main class="mx-auto w-full max-w-5xl py-8 px-8 lg:px-0 flex flex-col gap-8 scroll-m-8" id="__E-MENULIST">
     </main>
 
@@ -123,13 +188,13 @@
         <div href="" class="group relative *:duration-500">
             <img src="" alt="" id="_PREVIEW">
 
-            <a href="" id="_HLINK"
+            <div id="_INFOMATION"
                 class="absolute bottom-0 p-4 flex flex-col bg-black bg-opacity-75 text-white opacity-0 group-hover:opacity-100 h-0 group-hover:h-full md:group-hover:h-2/3">
                 <div class="w-full flex flex-row items-center justify-between ">
                     <span id="_CATEGORY"></span>
                     <p class="flex flex-row items-center justify-center gap-2">
                         More
-                        <span class="font-mono">-&gt;</span>
+                        <span class="font-mono">|&gt;</span>
                     </p>
                 </div>
                 <h1 class="text-3xl leading-none" id="_TITLE"></h1>
@@ -137,8 +202,7 @@
                     <span>$</span>
                     <span id="_PRICE"></span>
                 </p>
-
-            </a>
+            </div>
         </div>
     </template>
 
@@ -161,8 +225,7 @@
             return T.appendChild(t);
         }
 
-        async function render() {
-            const menu = await walk('./src/content/menu.json');
+        function render() {
             const sections = [
                 {
                     title: "Coffee And Milk Tea",
@@ -200,7 +263,7 @@
                     t.querySelector("#_CATEGORY").innerHTML = e.category;
                     t.querySelector("#_PREVIEW").src = e.images.preview;
                     t.querySelector("#_PREVIEW").alt = e.title;
-                    t.querySelector("#_HLINK").href = `./detail?product=${e.title}&category=${e.category}`;
+                    t.querySelector("#_INFOMATION").onclick = () => PreviewProduct(e.title, e.category);
 
                     insertTemplate(sectionTemplate.querySelector("#_MENULIST_CONTAINER"), t);
                 });
@@ -210,7 +273,12 @@
             });
         }
 
-        render();
+        const renderWorker = setInterval(() => {
+            if (menu) {
+                render();
+                clearInterval(renderWorker);
+            }
+        }, 150);
     </script>
 
     <main class="mx-auto w-full max-w-5xl py-8 px-8 lg:px-0 flex flex-col gap-8 scroll-m-8" id="Branch">
@@ -273,7 +341,6 @@
         <p>Provided By <a href="https://nuttapolkhumdang.work" target="_blank" class="hover:underline">Nuttapol
                 Khumdang</a></p>
     </footer>
-
 </body>
 
 </html>
